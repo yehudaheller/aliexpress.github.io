@@ -43,10 +43,11 @@ function loadExcelFile() {
     fetch(fileName)
         .then(response => response.arrayBuffer())
         .then(data => {
-            const workbook = XLS.read(data, { type: 'binary' });
-
-            const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-            productsData = XLS.utils.sheet_to_json(firstSheet);
+            return XlsxPopulate.fromDataAsync(data);
+        })
+        .then(workbook => {
+            const firstSheet = workbook.sheet(0);
+            productsData = firstSheet.usedRange().value();
 
             renderProducts(productsData);
         })
