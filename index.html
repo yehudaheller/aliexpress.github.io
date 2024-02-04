@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Filter</title>
-    <script src="xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xls/0.8.0/xls.core.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="filters">
-        <label for="priceFilter">Filter by Price:</label>
-        <input type="number" id="priceFilter" placeholder="Enter maximum price">
-        
-        <label for="ordersFilter">Filter by Orders:</label>
-        <input type="number" id="ordersFilter" placeholder="Enter minimum orders">
-        
-        <label for="discountFilter">Filter by Discount:</label>
-        <input type="number" id="discountFilter" placeholder="Enter minimum discount percentage">
+        <label for="price">Filter by Price:</label>
+        <input type="text" id="price" placeholder="Enter max price">
+
+        <label for="orders">Filter by Orders:</label>
+        <input type="text" id="orders" placeholder="Enter min orders">
+
+        <label for="discount">Filter by Discount:</label>
+        <input type="text" id="discount" placeholder="Enter min discount">
 
         <button onclick="filterProducts()">Apply Filters</button>
     </div>
