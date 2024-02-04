@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <script src="xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="filters">
+        <label for="priceFilter">Filter by Price:</label>
+        <input type="number" id="priceFilter" placeholder="Enter maximum price">
+        
+        <label for="ordersFilter">Filter by Orders:</label>
+        <input type="number" id="ordersFilter" placeholder="Enter minimum orders">
+        
+        <label for="discountFilter">Filter by Discount:</label>
+        <input type="number" id="discountFilter" placeholder="Enter minimum discount percentage">
+
+        <button onclick="filterProducts()">Apply Filters</button>
+    </div>
+
+    <div id="products"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
